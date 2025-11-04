@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elijah's Games</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🎮 ELIJAH MADE THIS 🎮</h1>
-    <p>Retro Arcade Unblocked Games Collection</p>
+    <h1>🎮 Elijah's Games</h1>
+    <p class="credit">ELIJAH MADE THIS</p>
   </header>
 
   <main>
-    <div id="games"></div>
+    <div class="game-list" id="gameList"></div>
+    <iframe id="gameFrame" class="hidden" allowfullscreen></iframe>
   </main>
 
   <footer>
-    <p>© 2025 Elijah's Games | Have fun, play safe!</p>
+    <button id="backButton" class="hidden">⬅ Back to Games</button>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
