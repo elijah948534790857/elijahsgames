@@ -4,24 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elijah's Games</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #0e0e0e;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 0;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .game {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .game:hover {
+      transform: scale(1.05);
+      background: #2a2a2a;
+    }
+    a {
+      color: #00d1ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>🎮 Elijah's Games</h1>
-    <p class="credit">ELIJAH MADE THIS</p>
-  </header>
+  <h1>🎮 Elijah's Games 🎮</h1>
+  <p>Click a game to play it in a new tab!</p>
 
-  <main>
-    <div class="game-list" id="gameList"></div>
-    <iframe id="gameFrame" class="hidden" allowfullscreen></iframe>
-  </main>
+  <div class="game-grid">
+    <div class="game"><a href="https://ubg100.github.io/slope/" target="_blank">Slope</a></div>
+    <div class="game"><a href="https://ubg100.github.io/flappy-bird/" target="_blank">Flappy Bird</a></div>
+    <div class="game"><a href="https://ubg100.github.io/run-3/" target="_blank">Run 3</a></div>
+    <div class="game"><a href="https://ubg100.github.io/1v1-lol/" target="_blank">1v1.lol</a></div>
+    <div class="game"><a href="https://ubg100.github.io/subway-surfers/" target="_blank">Subway Surfers</a></div>
+    <div class="game"><a href="https://ubg100.github.io/drift-hunters/" target="_blank">Drift Hunters</a></div>
+    <div class="game"><a href="https://ubg100.github.io/stickman-hook/" target="_blank">Stickman Hook</a></div>
+    <div class="game"><a href="https://ubg100.github.io/basketball-stars/" target="_blank">Basketball Stars</a></div>
+    <div class="game"><a href="https://ubg100.github.io/retro-bowl/" target="_blank">Retro Bowl</a></div>
+  </div>
 
-  <footer>
-    <button id="backButton" class="hidden">⬅ Back to Games</button>
-  </footer>
-
-  <script src="script.js"></script>
+  <p>Made by Elijah 😎</p>
 </body>
 </html>
-
