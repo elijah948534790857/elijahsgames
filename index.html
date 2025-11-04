@@ -6,58 +6,108 @@
   <title>Elijah's Games</title>
   <style>
     body {
-      background: #0e0e0e;
+      background: radial-gradient(circle at top, #0a0a0a, #000);
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Press Start 2P', sans-serif;
       text-align: center;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #00ffcc, #0066ff);
+      padding: 20px;
+      box-shadow: 0 0 20px #00ffcc;
     }
     h1 {
-      font-size: 2.5rem;
-      margin: 20px 0;
+      font-size: 24px;
+      margin: 0;
+    }
+    p.credit {
+      font-size: 10px;
+      color: #ffea00;
+      margin-top: 5px;
     }
     .game-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
       padding: 20px;
-      max-width: 1000px;
-      margin: auto;
     }
     .game {
       background: #1a1a1a;
       padding: 20px;
       border-radius: 10px;
-      transition: transform 0.2s;
+      border: 2px solid #00ffcc;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
     }
     .game:hover {
+      background: #00ffcc;
+      color: black;
       transform: scale(1.05);
-      background: #2a2a2a;
     }
-    a {
-      color: #00d1ff;
-      text-decoration: none;
-      font-weight: bold;
+    iframe {
+      width: 90%;
+      height: 80vh;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+    #backButton {
+      display: none;
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background: #00ffcc;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #backButton:hover {
+      background: #00ffff;
     }
   </style>
 </head>
 <body>
-  <h1>🎮 Elijah's Games 🎮</h1>
-  <p>Click a game to play it in a new tab!</p>
+  <header>
+    <h1>🎮 Elijah's Games 🎮</h1>
+    <p class="credit">ELIJAH MADE THIS</p>
+  </header>
 
-  <div class="game-grid">
-    <div class="game"><a href="https://ubg100.github.io/slope/" target="_blank">Slope</a></div>
-    <div class="game"><a href="https://ubg100.github.io/flappy-bird/" target="_blank">Flappy Bird</a></div>
-    <div class="game"><a href="https://ubg100.github.io/run-3/" target="_blank">Run 3</a></div>
-    <div class="game"><a href="https://ubg100.github.io/1v1-lol/" target="_blank">1v1.lol</a></div>
-    <div class="game"><a href="https://ubg100.github.io/subway-surfers/" target="_blank">Subway Surfers</a></div>
-    <div class="game"><a href="https://ubg100.github.io/drift-hunters/" target="_blank">Drift Hunters</a></div>
-    <div class="game"><a href="https://ubg100.github.io/stickman-hook/" target="_blank">Stickman Hook</a></div>
-    <div class="game"><a href="https://ubg100.github.io/basketball-stars/" target="_blank">Basketball Stars</a></div>
-    <div class="game"><a href="https://ubg100.github.io/retro-bowl/" target="_blank">Retro Bowl</a></div>
+  <div id="menu" class="game-grid">
+    <div class="game" onclick="openGame('https://ubg100.github.io/slope/')">Slope</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/flappy-bird/')">Flappy Bird</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/run-3/')">Run 3</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/1v1-lol/')">1v1.lol</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/drift-hunters/')">Drift Hunters</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/subway-surfers/')">Subway Surfers</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/stickman-hook/')">Stickman Hook</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/basketball-stars/')">Basketball Stars</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/retro-bowl/')">Retro Bowl</div>
+    <div class="game" onclick="openGame('https://ubg100.github.io/moto-x3m/')">Moto X3M</div>
   </div>
 
-  <p>Made by Elijah 😎</p>
+  <button id="backButton" onclick="goBack()">⬅ Back to Menu</button>
+  <iframe id="gameFrame"></iframe>
+
+  <script>
+    function openGame(url) {
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('backButton').style.display = 'block';
+      const frame = document.getElementById('gameFrame');
+      frame.src = url;
+      frame.style.display = 'block';
+    }
+    function goBack() {
+      document.getElementById('menu').style.display = 'grid';
+      document.getElementById('backButton').style.display = 'none';
+      const frame = document.getElementById('gameFrame');
+      frame.src = '';
+      frame.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
