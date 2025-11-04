@@ -12,116 +12,33 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
     header {
       background: linear-gradient(90deg, #00ffcc, #7c3aed);
       padding: 20px;
       box-shadow: 0 0 20px #00ffcc;
     }
-    h1 {
-      font-size: 22px;
-      margin: 0;
-    }
-    p.credit {
-      font-size: 10px;
-      color: #ffea00;
-      margin-top: 6px;
-    }
-
-    .top-bar {
-      max-width: 1000px;
-      margin: 12px auto 0;
-      padding: 0 16px 8px;
-    }
-
+    h1 { font-size: 22px; margin: 0; }
+    p.credit { font-size: 10px; color: #ffea00; margin-top: 6px; }
     #searchBox {
-      width: 100%;
-      max-width: 400px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid #00ffcc;
-      background: #020617;
-      color: #e5e7eb;
-      font-family: inherit;
-      font-size: 11px;
-      outline: none;
-      box-shadow: 0 0 10px rgba(0,255,204,0.3);
+      width: 90%; max-width: 400px; padding: 10px;
+      border-radius: 999px; border: 1px solid #00ffcc;
+      background: #020617; color: #e5e7eb; margin: 15px auto;
+      display: block; font-family: inherit; text-align: center;
     }
-    #searchBox::placeholder {
-      color: #6b7280;
-    }
-
     .game-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
-      padding: 18px;
-      max-width: 1000px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px; padding: 20px; max-width: 1000px; margin: 0 auto;
     }
     .game {
-      background: #111827;
-      padding: 12px 8px;
-      border-radius: 10px;
-      border: 2px solid #00ffcc;
-      cursor: pointer;
-      transition: transform 0.18s, background 0.18s, box-shadow 0.18s;
-      font-size: 11px;
-      line-height: 1.3;
+      background: #111827; padding: 12px; border-radius: 10px;
+      border: 2px solid #00ffcc; cursor: pointer;
+      transition: all 0.2s ease; font-size: 12px;
     }
     .game:hover {
-      background: #00ffcc;
-      color: #020617;
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 0 18px #00ffcc;
+      background: #00ffcc; color: #000; transform: scale(1.05);
     }
-    .hidden-tile {
-      display: none !important;
-    }
-
-    iframe {
-      width: 95%;
-      max-width: 1000px;
-      height: 70vh;
-      border: none;
-      margin: 16px auto 8px;
-      display: none;
-      border-radius: 10px;
-      box-shadow: 0 0 24px #00ffcc;
-    }
-
-    #backButton, #openNewTab {
-      display: none;
-      margin: 8px 4px 18px;
-      padding: 9px 16px;
-      font-size: 11px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    #backButton {
-      background: #00ffcc;
-      color: #020617;
-    }
-    #backButton:hover {
-      background: #5ef2ff;
-    }
-    #openNewTab {
-      background: transparent;
-      color: #fbbf24;
-      border: 1px solid #fbbf24;
-    }
-    #openNewTab:hover {
-      background: rgba(251, 191, 36, 0.1);
-    }
-
-    footer {
-      font-size: 10px;
-      color: #9ca3af;
-      margin: 10px 0 16px;
-    }
+    .hidden-tile { display: none; }
   </style>
 </head>
 <body>
@@ -130,121 +47,69 @@
     <p class="credit">ELIJAH MADE THIS</p>
   </header>
 
-  <div class="top-bar">
-    <input id="searchBox" type="text" placeholder="Search games (e.g. slope, retro bowl, fnf)..." />
-  </div>
+  <input id="searchBox" type="text" placeholder="Search games..." />
 
   <div id="menu" class="game-grid">
-    <!-- 50 games -->
-    <div class="game" data-url="https://ubg100.github.io/slope/">Slope</div>
-    <div class="game" data-url="https://ubg100.github.io/flappy-bird/">Flappy Bird</div>
-    <div class="game" data-url="https://ubg100.github.io/run-3/">Run 3</div>
-    <div class="game" data-url="https://ubg100.github.io/1v1-lol/">1v1.lol</div>
-    <div class="game" data-url="https://ubg100.github.io/drift-hunters/">Drift Hunters</div>
-    <div class="game" data-url="https://ubg100.github.io/subway-surfers/">Subway Surfers</div>
-    <div class="game" data-url="https://ubg100.github.io/stickman-hook/">Stickman Hook</div>
-    <div class="game" data-url="https://ubg100.github.io/basketball-stars/">Basketball Stars</div>
-    <div class="game" data-url="https://ubg100.github.io/retro-bowl/">Retro Bowl</div>
-    <div class="game" data-url="https://ubg100.github.io/moto-x3m/">Moto X3M</div>
+    <div class="game" data-url="https://slopeonline.online/">Slope</div>
+    <div class="game" data-url="https://flappybird.io/">Flappy Bird</div>
+    <div class="game" data-url="https://poki.com/en/g/run-3">Run 3</div>
+    <div class="game" data-url="https://1v1.lol/">1v1.lol</div>
+    <div class="game" data-url="https://www.crazygames.com/game/drift-hunters">Drift Hunters</div>
+    <div class="game" data-url="https://poki.com/en/g/subway-surfers">Subway Surfers</div>
+    <div class="game" data-url="https://poki.com/en/g/stickman-hook">Stickman Hook</div>
+    <div class="game" data-url="https://basketballstarsonline.github.io/">Basketball Stars</div>
+    <div class="game" data-url="https://retrobowlgame.io/">Retro Bowl</div>
+    <div class="game" data-url="https://poki.com/en/g/moto-x3m">Moto X3M</div>
 
-    <div class="game" data-url="https://ubg100.github.io/ovo/">OvO</div>
-    <div class="game" data-url="https://ubg100.github.io/drive-mad/">Drive Mad</div>
-    <div class="game" data-url="https://ubg100.github.io/slope-ball/">Slope Ball</div>
-    <div class="game" data-url="https://ubg100.github.io/monkey-mart/">Monkey Mart</div>
-    <div class="game" data-url="https://ubg100.github.io/idle-breakout/">Idle Breakout</div>
-    <div class="game" data-url="https://ubg100.github.io/just-fall/">Just Fall LOL</div>
-    <div class="game" data-url="https://ubg100.github.io/tunnel-rush/">Tunnel Rush</div>
-    <div class="game" data-url="https://ubg100.github.io/snow-rider-3d/">Snow Rider 3D</div>
-    <div class="game" data-url="https://ubg100.github.io/fireboy-and-watergirl-forest-temple/">Fireboy & Watergirl</div>
-    <div class="game" data-url="https://ubg100.github.io/gun-mayhem-2/">Gun Mayhem 2</div>
+    <div class="game" data-url="https://poki.com/en/g/ovo">OvO</div>
+    <div class="game" data-url="https://poki.com/en/g/drive-mad">Drive Mad</div>
+    <div class="game" data-url="https://monkeymartgame.org/online">Monkey Mart</div>
+    <div class="game" data-url="https://poki.com/en/g/tunnel-rush">Tunnel Rush</div>
+    <div class="game" data-url="https://www.hoodamath.com/games/snowrider3d.html">Snow Rider 3D</div>
+    <div class="game" data-url="https://www.coolmathgames.com/0-vex-7">Vex 7</div>
+    <div class="game" data-url="https://just-fall-lol.github.io/">Just Fall LOL</div>
+    <div class="game" data-url="https://smashkarts.io/">Smash Karts</div>
+    <div class="game" data-url="https://poki.com/en/g/happy-wheels">Happy Wheels</div>
+    <div class="game" data-url="https://crossy-road.io/">Crossy Road</div>
 
-    <div class="game" data-url="https://ubg100.github.io/vex-7/">Vex 7</div>
-    <div class="game" data-url="https://ubg100.github.io/stick-merge/">Stick Merge</div>
-    <div class="game" data-url="https://ubg100.github.io/color-tunnel/">Color Tunnel</div>
-    <div class="game" data-url="https://ubg100.github.io/friday-night-funkin/">FNF</div>
-    <div class="game" data-url="https://ubg100.github.io/happy-wheels/">Happy Wheels</div>
-    <div class="game" data-url="https://ubg100.github.io/temple-run-2/">Temple Run 2</div>
-    <div class="game" data-url="https://ubg100.github.io/football-legends/">Football Legends</div>
-    <div class="game" data-url="https://ubg100.github.io/boxing-random/">Boxing Random</div>
-    <div class="game" data-url="https://ubg100.github.io/stack/">Stack</div>
-    <div class="game" data-url="https://ubg100.github.io/2048/">2048</div>
+    <div class="game" data-url="https://www.crazygames.com/game/geometry-dash-online">Geometry Dash</div>
+    <div class="game" data-url="https://poki.com/en/g/paper-io-2">Paper.io 2</div>
+    <div class="game" data-url="https://poki.com/en/g/2048">2048</div>
+    <div class="game" data-url="https://poki.com/en/g/temple-run-2">Temple Run 2</div>
+    <div class="game" data-url="https://poki.com/en/g/fireboy-and-watergirl-1-forest-temple">Fireboy & Watergirl</div>
+    <div class="game" data-url="https://poki.com/en/g/fireboy-and-watergirl-2-light-temple">Fireboy & Watergirl 2</div>
+    <div class="game" data-url="https://poki.com/en/g/vex-6">Vex 6</div>
+    <div class="game" data-url="https://poki.com/en/g/idle-breakout">Idle Breakout</div>
+    <div class="game" data-url="https://poki.com/en/g/football-legends">Football Legends</div>
+    <div class="game" data-url="https://poki.com/en/g/rooftop-snipers">Rooftop Snipers</div>
 
-    <div class="game" data-url="https://ubg100.github.io/minecraft-classic/">Minecraft Classic</div>
-    <div class="game" data-url="https://ubg100.github.io/paper-io-2/">Paper.io 2</div>
-    <div class="game" data-url="https://ubg100.github.io/tiny-fishing/">Tiny Fishing</div>
-    <div class="game" data-url="https://ubg100.github.io/whack-your-boss/">Whack Your Boss</div>
-    <div class="game" data-url="https://ubg100.github.io/fnaf-1/">FNAF 1</div>
-    <div class="game" data-url="https://ubg100.github.io/smash-karts/">Smash Karts</div>
-    <div class="game" data-url="https://ubg100.github.io/balit-1/">Ball Sort</div>
-    <div class="game" data-url="https://ubg100.github.io/slope-tunnel/">Slope Tunnel</div>
-    <div class="game" data-url="https://ubg100.github.io/duck-life-4/">Duck Life 4</div>
-    <div class="game" data-url="https://ubg100.github.io/learn-to-fly-3/">Learn to Fly 3</div>
+    <div class="game" data-url="https://poki.com/en/g/getaway-shootout">Getaway Shootout</div>
+    <div class="game" data-url="https://poki.com/en/g/minecraft-classic">Minecraft Classic</div>
+    <div class="game" data-url="https://poki.com/en/g/short-ride">Short Ride</div>
+    <div class="game" data-url="https://poki.com/en/g/stickman-warriors">Stickman Warriors</div>
+    <div class="game" data-url="https://poki.com/en/g/boxing-random">Boxing Random</div>
+    <div class="game" data-url="https://poki.com/en/g/duck-life-4">Duck Life 4</div>
+    <div class="game" data-url="https://poki.com/en/g/learn-to-fly-3">Learn to Fly 3</div>
+    <div class="game" data-url="https://poki.com/en/g/parking-fury-3d">Parking Fury 3D</div>
+    <div class="game" data-url="https://poki.com/en/g/slope-ball">Slope Ball</div>
+    <div class="game" data-url="https://poki.com/en/g/ball-sort-puzzle">Ball Sort</div>
 
-    <div class="game" data-url="https://ubg100.github.io/geometry-dash/">Geometry Dash</div>
-    <div class="game" data-url="https://ubg100.github.io/jetpack-joyride/">Jetpack Joyride</div>
-    <div class="game" data-url="https://ubg100.github.io/fire-boy-and-water-girl-ice-temple/">Fireboy & Watergirl 2</div>
-    <div class="game" data-url="https://ubg100.github.io/parking-fury-3d/">Parking Fury 3D</div>
-    <div class="game" data-url="https://ubg100.github.io/stickman-warriors/">Stickman Warriors</div>
-    <div class="game" data-url="https://ubg100.github.io/short-ride/">Short Ride</div>
-    <div class="game" data-url="https://ubg100.github.io/crossy-road/">Crossy Road</div>
-    <div class="game" data-url="https://ubg100.github.io/rooftop-snipers/">Rooftop Snipers</div>
-    <div class="game" data-url="https://ubg100.github.io/getaway-shootout/">Getaway Shootout</div>
-    <div class="game" data-url="https://ubg100.github.io/zombotron-2/">Zombotron 2</div>
+    <div class="game" data-url="https://poki.com/en/g/zombotron-2">Zombotron 2</div>
+    <div class="game" data-url="https://poki.com/en/g/color-tunnel">Color Tunnel</div>
+    <div class="game" data-url="https://poki.com/en/g/fnaf-1">FNAF 1</div>
+    <div class="game" data-url="https://poki.com/en/g/jetpack-joyride">Jetpack Joyride</div>
   </div>
 
-  <button id="backButton">⬅ Back to Menu</button>
-  <br />
-  <button id="openNewTab">🔗 Open in new tab if the game doesn't load</button>
-
-  <iframe id="gameFrame"></iframe>
-
-  <footer>
-    <p>Some games might still block embedding. Use the button above if the frame stays blank.</p>
-  </footer>
-
   <script>
-    const menu = document.getElementById('menu');
-    const frame = document.getElementById('gameFrame');
-    const backBtn = document.getElementById('backButton');
-    const openNewTab = document.getElementById('openNewTab');
     const searchBox = document.getElementById('searchBox');
-
-    // clicking tiles
-    menu.querySelectorAll('.game').forEach(tile => {
-      tile.addEventListener('click', () => {
-        const url = tile.getAttribute('data-url');
-        openGame(url);
-      });
-    });
-
-    function openGame(url) {
-      menu.style.display = 'none';
-      frame.src = url;
-      frame.style.display = 'block';
-      backBtn.style.display = 'inline-block';
-      openNewTab.style.display = 'inline-block';
-      openNewTab.onclick = () => window.open(url, '_blank');
-    }
-
-    function goBack() {
-      frame.style.display = 'none';
-      frame.src = '';
-      backBtn.style.display = 'none';
-      openNewTab.style.display = 'none';
-      menu.style.display = 'grid';
-    }
-    backBtn.addEventListener('click', goBack);
-
-    // search filter
+    const tiles = document.querySelectorAll('.game');
+    tiles.forEach(tile => tile.addEventListener('click', () => {
+      window.open(tile.dataset.url, '_blank');
+    }));
     searchBox.addEventListener('input', () => {
-      const q = searchBox.value.toLowerCase();
-      menu.querySelectorAll('.game').forEach(tile => {
-        const name = tile.textContent.toLowerCase();
-        if (!q || name.includes(q)) {
-          tile.classList.remove('hidden-tile');
-        } else {
-          tile.classList.add('hidden-tile');
-        }
+      const query = searchBox.value.toLowerCase();
+      tiles.forEach(tile => {
+        tile.classList.toggle('hidden-tile', !tile.textContent.toLowerCase().includes(query));
       });
     });
   </script>
