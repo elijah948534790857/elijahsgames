@@ -1,54 +1,73 @@
 body {
-  background-color: #111;
-  color: #0ff;
-  font-family: 'Press Start 2P', monospace;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 header {
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
   padding: 20px;
-  background-color: #222;
-  border-bottom: 3px solid #0ff;
+  box-shadow: 0 0 15px #ff00cc;
 }
 
 h1 {
-  font-size: 24px;
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #0ff;
+  margin: 0;
+  font-size: 20px;
 }
 
-#games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
+.credit {
+  font-size: 10px;
+  color: #ffcc00;
 }
 
-.game {
-  border: 2px solid #0ff;
-  margin: 10px;
-  padding: 10px;
-  width: 180px;
-  background-color: #222;
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.game-tile {
+  background-color: #1e1e1e;
+  border: 2px solid #ff00cc;
   border-radius: 10px;
-  box-shadow: 0 0 10px #0ff;
-  transition: transform 0.2s;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.game:hover {
+.game-tile:hover {
+  background-color: #ff00cc;
+  color: black;
   transform: scale(1.05);
 }
 
-a {
-  color: #ff0;
-  text-decoration: none;
+iframe {
+  width: 90%;
+  height: 80vh;
+  border: none;
+  margin: 20px auto;
+  display: block;
 }
 
-footer {
-  margin-top: 40px;
-  padding: 10px;
-  font-size: 10px;
-  color: #aaa;
+.hidden {
+  display: none;
+}
+
+#backButton {
+  background: #ff00cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00cc;
+}
+
+#backButton:hover {
+  background: #ff33ff;
 }
